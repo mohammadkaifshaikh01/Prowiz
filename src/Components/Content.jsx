@@ -24,9 +24,9 @@ const data = [
 const States = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-      {data.map((e, index) => (
+      {data.map((e, id) => (
         <div
-          key={index}
+          key={id}
           className="border border-gray-300 rounded-xl p-5 flex flex-col items-left text-left bg-white shadow-md"
         >
           <img src={e.icons} alt={e.name} className="w-11 h-11 object-contain mb-3" />
