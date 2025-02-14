@@ -17,27 +17,5 @@
 		"name": "Mohammad Kaif",
 		"age": 24,
 		"profilePicture": "https://i.ibb.co/0jsJG54C/istockphoto-1682296067-612x612.jpg"
-	},
-	"states": [
-		{
-			"icons": "https://i.ibb.co/Z6SLz1dN/Frame-9.png",
-			"name": "Items Processed",
-			"number": 3200
-		},
-		{
-			"icons": "https://i.ibb.co/7xxSQBz1/Frame-9-1.png",
-			"name": "Items Passed",
-			"number": 1050
-		},
-		{
-			"icons": "https://i.ibb.co/7xxSQBz1/Frame-9-1.png",
-			"name": "Items Rejected",
-			"number": 18
-		},
-		{
-			"icons": "https://i.ibb.co/7xxSQBz1/Frame-9-1.png",
-			"name": "Efficiency (Units/Minute)",
-			"number": 125.75
-		}
-	]
+	}
 }
