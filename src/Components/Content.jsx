@@ -1,35 +1,40 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-
+import { ChartBarIcon, DocumentTextIcon, CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/solid';
 const States = () => {
-  const [data, setData] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      const res = await axios.get("http://localhost:8000/states");
-      setData(res.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
-    <div className="flex flex-wrap justify-center lg:justify-between gap-6 p-4">
-      {data?.map((e, index) => (
-        <div
-          key={index}
-          className="border border-gray-400 rounded-xl p-4 w-full sm:w-80 lg:w-64 flex flex-col items-left text-left bg-white shadow-sm"
-        >
-          <img src={e.icons} alt="icons" className="w-13 h-13 object-contain mb-2" />
-          <p className="text-lg font-semibold">{e.name}</p>
-          <p className="text-gray-500">{e.number}</p>
-        </div>
-      ))}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-8">
+    <div className="bg-white p-6 rounded-lg shadow">
+      <div className="flex items-center space-x-2 mb-4">
+        <DocumentTextIcon className="h-6 w-6 text-blue-600" />
+        <h3 className="text-gray-600">Units Processed</h3>
+      </div>
+      <p className="text-3xl font-bold">2,575</p>
     </div>
+    <div className="bg-white p-6 rounded-lg shadow">
+      <div className="flex items-center space-x-2 mb-4">
+        <CheckCircleIcon className="h-6 w-6 text-blue-600" />
+        <h3 className="text-gray-600">Units Passed</h3>
+      </div>
+      <p className="text-3xl font-bold">814</p>
+    </div>
+    <div className="bg-white p-6 rounded-lg shadow">
+      <div className="flex items-center space-x-2 mb-4">
+        <XCircleIcon className="h-6 w-6 text-blue-600" />
+        <h3 className="text-gray-600">Units Rejected</h3>
+      </div>
+      <p className="text-3xl font-bold">12</p>
+    </div>
+    <div className="bg-white p-6 rounded-lg shadow">
+      <div className="flex items-center space-x-2 mb-4">
+        <ChartBarIcon className="h-6 w-6 text-blue-600" />
+        <h3 className="text-gray-600">Throughput (Units/Minute)</h3>
+      </div>
+      <p className="text-3xl font-bold">110.41</p>
+    </div>
+  </div>
+
+
   );
 };
 
