@@ -6,7 +6,7 @@ import { FiX } from "react-icons/fi";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
-      <div className="hidden md:flex flex-col bg-white shadow-md h-screen w-64 p-6">
+      <div className="hidden md:flex flex-col bg-white shadow-md full-h-screen w-64 p-6">
         <nav className="w-full">
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-gray-700 hover:text-blue-500 hover:bg-gray-100 p-3 rounded-md cursor-pointer">
